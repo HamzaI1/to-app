@@ -1,0 +1,156 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: brown;
+  color: whitesmoke;
+}
+
+.title {
+  font-size: 65px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+}
+
+.input {
+  height: 60px;
+  width: 550px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(207, 207, 207);
+  font-size: 18px;
+}
+
+.input::placeholder {
+  font-size: 18px;
+  color: rgb(107, 107, 107);
+}
+
+.add-button {
+  background-color: rgb(0, 197, 82);
+  color: rgb(27, 27, 27);
+  border: none;
+  padding: 0 50px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  height: 100%;
+}
+
+.input-field {
+  position: relative;
+  display: inline-block;
+}
+
+.todo-list-container {
+  width: 480px;
+  margin-top: 20px;
+}
+
+.todo-task {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(49, 49, 49, 0.514);
+  color: rgba(252, 225, 175, 0.815);
+  padding: 11px;
+  border-radius: 40px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+}
+
+.x-mark-container {
+  position: absolute;
+  right: 30px;
+  padding: 12px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.09s;
+}
+
+.x-mark-container:hover {
+  background-color: rgba(75, 75, 75, 0.363);
+}
+
+.close-mark {
+  font-size: 22px;
+  color: rgba(255, 45, 45, 0.829);
+}
+
+.task {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgba(150, 150, 150, 0.219);
+  border-radius: 20px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: rgb(0, 197, 82);
+  border-color: rgb(0, 197, 82);
+  position: relative;
+  border-radius: 20px;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '\2714';
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -35px;
+  text-wrap: nowrap;
+  background-color: rgba(114, 114, 114, 0.555);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 13.5px;
+  visibility: hidden;
+  transition: all 0.15s;
+  z-index: 1;
+}
+
+.wrapper:hover .tooltip, .x-mark-container:hover .tooltip {
+  visibility: visible;
+  transition-delay: 0.25s;
+}
